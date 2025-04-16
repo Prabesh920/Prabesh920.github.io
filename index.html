@@ -219,13 +219,13 @@
 									</div>
 									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Prabesh Pokharel</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Civil Engineer</span></p>
-										<p><span class="title-s">Experience: </span> <span>1 Years 9 Months</span></p>
-										<p><span class="title-s">Address: </span> <span>Bharatpur Metropolitan City Ward    No-7,Chitwan,Bagmati Province,Nepal</span></p>
+										<div class="about-info">
+										  <p><span class="title-s">Name: </span> <span>Prabesh Pokharel</span></p>
+										  <p><span class="title-s">Job Role: </span> <span>Civil Engineer</span></p>
+										  <p><span class="title-s">Experience: </span> <span id="experience"></span></p>
+										  <p><span class="title-s">Address: </span> <span>Bharatpur Metropolitan City Ward No-7, Chitwan, Bagmati Province, Nepal</span></p>
+										</div>
 									  </div>
-									</div>
 								  </div>
 
 								<div class="skill-mf">
@@ -572,6 +572,25 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script>
+	// Define the start date
+	const startDate = new Date("2023-01-01");
+	const today = new Date();
+  
+	// Calculate year and month difference
+	let years = today.getFullYear() - startDate.getFullYear();
+	let months = today.getMonth() - startDate.getMonth();
+  
+	if (months < 0) {
+	  years--;
+	  months += 12;
+	}
+  
+	// Show the result in the HTML
+	document.getElementById("experience").textContent = `${years} Years ${months} Months`;
+  </script>
 
 
   <script src="js/jquery.min.js"></script>
