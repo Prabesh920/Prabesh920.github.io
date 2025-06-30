@@ -628,6 +628,29 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+
+	  <script>
+  // Start counting from Jan 1, 2023
+  const coffeeStartDate = new Date("2023-01-01");
+  const today = new Date();
+
+  // Calculate the number of days passed
+  const timeDiff = today - coffeeStartDate;
+  const daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+  // Cups of coffee = 3 cups per day
+  const totalCups = daysPassed * 3;
+
+  // Update the coffee counter
+  document.querySelectorAll(".number[data-number]").forEach(el => {
+    const label = el.nextElementSibling?.textContent?.toLowerCase();
+    if (label && label.includes("coffee")) {
+      el.setAttribute("data-number", totalCups);
+      el.textContent = totalCups;
+    }
+  });
+</script>
     
   </body>
 </html>
