@@ -22,41 +22,42 @@ body {
   scroll-behavior: smooth;
   font-size: 16px;
 }
-/* Header style with image intersection */
+/* Header style remains same */
 .custom-header {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px 20px;
-  background: linear-gradient(45deg, #ff5e62, #ff9966); /* Adjust as needed */
+  padding: 25px 20px;
+  background: linear-gradient(45deg, #ff5e62, #ff9966);
   text-align: center;
   overflow: visible;
 }
 
-/* Wrapper for the circular profile */
+/* Smaller and cleaner image container */
 .photo-wrapper {
   position: absolute;
-  left: -40px;              /* Pushes image out of the left edge */
+  left: -30px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
 }
 
-/* Circular profile image */
+/* Smaller circular image */
 .profile-left-logo {
-  width: 80px;
-  height: 80px;
+  width: 55px;              /* Reduced from 80px to 55px */
+  height: 55px;
   border-radius: 50%;
-  border: 3px solid white;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Optional spacing to balance text with image */
+/* Adjust spacing so text doesn’t clash */
 .header-text {
-  margin-left: 60px;
+  margin-left: 40px;
 }
+
 
 @media (max-width: 600px) {
   .profile-photo {
