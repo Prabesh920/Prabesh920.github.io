@@ -42,14 +42,14 @@ body {
   z-index: 10;
 }
 
-/* Circular profile photo */
+/* Circular profile photo – very small */
 .profile-left-logo {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 1.5px solid white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Shift header text to the right to avoid overlap */
