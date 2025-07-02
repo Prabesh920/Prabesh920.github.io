@@ -22,47 +22,52 @@ body {
   scroll-behavior: smooth;
   font-size: 16px;
 }
-/* Header style remains same */
+/* Header container */
 .custom-header {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px 20px;
-  background: linear-gradient(45deg, #ff5e62, #ff9966);
-  text-align: center;
+  padding: 20px 20px;
+  background: linear-gradient(45deg, #ff5e62, #ff9966); /* Your gradient */
   overflow: visible;
 }
 
-/* Smaller and cleaner image container */
+/* Profile photo wrapper, overlapping the left edge */
 .photo-wrapper {
   position: absolute;
-  left: -30px;
+  left: -25px;           /* Overlap amount */
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
 }
 
-/* Smaller circular image */
+/* Circular profile photo */
 .profile-left-logo {
-  width: 55px;              /* Reduced from 80px to 55px */
-  height: 55px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Adjust spacing so text doesn’t clash */
+/* Shift header text to the right to avoid overlap */
 .header-text {
-  margin-left: 40px;
+  margin-left: 35px;
 }
 
-
+/* Optional responsive adjustment for small screens */
 @media (max-width: 600px) {
-  .profile-photo {
-    width: 60px;
-    height: 60px;
+  .photo-wrapper {
+    left: -20px;
+  }
+  .profile-left-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .header-text {
+    margin-left: 30px;
   }
 }
 
