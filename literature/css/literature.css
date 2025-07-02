@@ -22,53 +22,42 @@ body {
   scroll-behavior: smooth;
   font-size: 16px;
 }
-/* Header container */
+
+
 .custom-header {
-  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 20px;
-  background: linear-gradient(45deg, #ff5e62, #ff9966); /* Your gradient */
-  overflow: visible;
+  align-items: flex-start;
+  padding: 25px 20px;
+  background: linear-gradient(45deg, #ff5e62, #ff9966);
+  overflow: hidden;
 }
 
-/* Profile photo wrapper, overlapping the left edge */
-.photo-wrapper {
-  position: absolute;
-  left: -25px;           /* Overlap amount */
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-/* Circular profile photo – very small */
 .profile-left-logo {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   object-fit: cover;
+  margin-right: 10px;
+  margin-top: 3px;
   border: 1.5px solid white;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* Shift header text to the right to avoid overlap */
 .header-text {
-  margin-left: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-/* Optional responsive adjustment for small screens */
-@media (max-width: 600px) {
-  .photo-wrapper {
-    left: -20px;
-  }
-  .profile-left-logo {
-    width: 40px;
-    height: 40px;
-  }
-  .header-text {
-    margin-left: 30px;
-  }
+.header-text h1 {
+  margin: 0;
+  font-size: 1.7em;
+}
+
+.tagline {
+  margin: 5px 0 0;
+  font-size: 0.95em;
+  color: white;
 }
 
 /* ====== Header ====== */
