@@ -22,23 +22,41 @@ body {
   scroll-behavior: smooth;
   font-size: 16px;
 }
-.profile-container {
-  position: fixed;      /* Keeps photo always visible */
-  top: 15px;            /* Adjust distance from top */
-  left: 15px;           /* Adjust distance from left */
-  z-index: 1000;        /* Ensures it stays above other content */
+/* Header style with image intersection */
+.custom-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  background: linear-gradient(45deg, #ff5e62, #ff9966); /* Adjust as needed */
+  text-align: center;
+  overflow: visible;
 }
 
-.profile-photo {
-  width: 60px;          /* Defines small, consistent size */
-  height: 60px;
-  border-radius: 50%;   /* Makes it circular */
-  object-fit: cover;     /* Crops centrally */
-  border: 2px solid white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+/* Wrapper for the circular profile */
+.photo-wrapper {
+  position: absolute;
+  left: -40px;              /* Pushes image out of the left edge */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
+/* Circular profile image */
+.profile-left-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
 
+/* Optional spacing to balance text with image */
+.header-text {
+  margin-left: 60px;
+}
 
 @media (max-width: 600px) {
   .profile-photo {
