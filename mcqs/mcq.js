@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('theme-toggle');
   const paginationWrapper = document.getElementById('pagination');
 
-  const MCQS_PER_PAGE = 50;
+  const MCQS_PER_PAGE = 10;
   let currentPage = 1;
   let allMcqs = [];
   let filteredMcqs = [];
